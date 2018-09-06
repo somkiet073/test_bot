@@ -29,13 +29,13 @@
 	  $arrayPostData['messages'][1]['stickerId'] = "124";
 	  pushMsg($arrayHeader,$arrayPostData);
    }
-   if($message == "ชื่อก๊อง"){
+   if($message == "เราชื่อก๊อง" || $message == "ชื่อก๊อง" || $message == "ก๊อง"){
 	  $arrayPostData['to'] = $id;
-	  $arrayPostData['messages'][1]['type'] = "sticker";
-	  $arrayPostData['messages'][1]['packageId'] = "1";
-	  $arrayPostData['messages'][1]['stickerId'] = "125";
-	  $arrayPostData['messages'][0]['type'] = "text";
-	  $arrayPostData['messages'][0]['text'] = "I na hee";
+	  $arrayPostData['messages'][0]['type'] = "sticker";
+	  $arrayPostData['messages'][0]['packageId'] = "1";
+	  $arrayPostData['messages'][0]['stickerId'] = "125";
+	  $arrayPostData['messages'][1]['type'] = "text";
+	  $arrayPostData['messages'][1]['text'] = "I na hee";
 	  pushMsg($arrayHeader,$arrayPostData);
    }	
    function pushMsg($arrayHeader,$arrayPostData){
