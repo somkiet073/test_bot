@@ -20,6 +20,24 @@
 	  $arrayPostData['messages'][1]['stickerId'] = "34";
 	  pushMsg($arrayHeader,$arrayPostData);
    }
+   if($message == "ชื่ออะไร"){
+	  $arrayPostData['to'] = $id;
+	  $arrayPostData['messages'][0]['type'] = "text";
+	  $arrayPostData['messages'][0]['text'] = "ชื่อบอทไลน์ จร้า เธอชื่ออะไร";
+	  $arrayPostData['messages'][1]['type'] = "sticker";
+	  $arrayPostData['messages'][1]['packageId'] = "1";
+	  $arrayPostData['messages'][1]['stickerId'] = "124";
+	  pushMsg($arrayHeader,$arrayPostData);
+   }
+   if($message == "ชื่อก๊อง"){
+	  $arrayPostData['to'] = $id;
+	  $arrayPostData['messages'][1]['type'] = "sticker";
+	  $arrayPostData['messages'][1]['packageId'] = "1";
+	  $arrayPostData['messages'][1]['stickerId'] = "125";
+	  $arrayPostData['messages'][0]['type'] = "text";
+	  $arrayPostData['messages'][0]['text'] = "I na hee";
+	  pushMsg($arrayHeader,$arrayPostData);
+   }	
    function pushMsg($arrayHeader,$arrayPostData){
 	  $strUrl = "https://api.line.me/v2/bot/message/push";
 	  $ch = curl_init();
