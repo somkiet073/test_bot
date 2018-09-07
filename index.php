@@ -19,8 +19,7 @@
 	  $arrayPostData['messages'][1]['packageId'] = "2";
 	  $arrayPostData['messages'][1]['stickerId'] = "34";
 	  pushMsg($arrayHeader,$arrayPostData);
-   }
-   if($message == "ชื่ออะไร" || $message == "ชื่อไร" ){
+   }else if($message == "ชื่ออะไร" || $message == "ชื่อไร" ){
 	  $arrayPostData['to'] = $id;
 	  $arrayPostData['messages'][0]['type'] = "text";
 	  $arrayPostData['messages'][0]['text'] = "ชื่อบอทไลน์ จร้า เธอชื่ออะไร";
@@ -28,8 +27,7 @@
 	  $arrayPostData['messages'][1]['packageId'] = "1";
 	  $arrayPostData['messages'][1]['stickerId'] = "124";
 	  pushMsg($arrayHeader,$arrayPostData);
-   }
-   if($message == "เราชื่อก๊อง" || $message == "ชื่อก๊อง" || $message == "ก๊อง"){
+   }else if($message == "เราชื่อก๊อง" || $message == "ชื่อก๊อง" || $message == "ก๊อง"){
 	  $arrayPostData['to'] = $id;
 	  $arrayPostData['messages'][0]['type'] = "sticker";
 	  $arrayPostData['messages'][0]['packageId'] = "1";
@@ -37,8 +35,7 @@
 	  $arrayPostData['messages'][1]['type'] = "text";
 	  $arrayPostData['messages'][1]['text'] = "I na hee";
 	  pushMsg($arrayHeader,$arrayPostData);
-   }
-   if($message == "เราชื่อปลื้ม" || $message == "ชื่อปลื้ม" || $message == "ปลื้ม"){
+   }else if($message == "เราชื่อปลื้ม" || $message == "ชื่อปลื้ม" || $message == "ปลื้ม"){
 	  $arrayPostData['to'] = $id;
 	  //$arrayPostData['messages'][0]['type'] = "sticker";
 	  //$arrayPostData['messages'][0]['packageId'] = "1";
@@ -46,8 +43,7 @@
 	  $arrayPostData['messages'][0]['type'] = "text";
 	  $arrayPostData['messages'][0]['text'] = "หล่อจังน้องเปรม เริงเมือง";
 	  pushMsg($arrayHeader,$arrayPostData);
-   }	
-  if($message == "เราชื่อโจ้" || $message == "ชื่อโจ้" || $message == "โจ้"){
+   }else if($message == "เราชื่อโจ้" || $message == "ชื่อโจ้" || $message == "โจ้"){
 	  $arrayPostData['to'] = $id;
 	  //$arrayPostData['messages'][0]['type'] = "sticker";
 	  //$arrayPostData['messages'][0]['packageId'] = "1";
@@ -55,17 +51,15 @@
 	  $arrayPostData['messages'][0]['type'] = "text";
 	  $arrayPostData['messages'][0]['text'] = "หล่อจังพี่โจ้";
 	  pushMsg($arrayHeader,$arrayPostData);
-   }	
-   if($message == "เราชื่อฟลุ๊ก" || $message == "ชื่อฟลุ๊ก" || $message == "ฟลุ๊ก"){
+   }else if($message == "เราชื่อฟลุ๊ก" || $message == "ชื่อฟลุ๊ก" || $message == "ฟลุ๊ก"){
 	  $arrayPostData['to'] = $id;
 	  //$arrayPostData['messages'][0]['type'] = "sticker";
 	  //$arrayPostData['messages'][0]['packageId'] = "1";
 	  //$arrayPostData['messages'][0]['stickerId'] = "125";
 	  $arrayPostData['messages'][0]['type'] = "text";
-	  $arrayPostData['messages'][0]['text'] = "กรี๊ดดด ฟลุ๊ก!!!";
+	  $arrayPostData['messages'][0]['text'] = "กรี๊ดดด พี่ฟลุ๊ก!!!";
 	  pushMsg($arrayHeader,$arrayPostData);
-   }	
-   if($message == "เราชื่อยุ่ง" || $message == "ชื่อยุ่ง"){
+   }else if($message == "เราชื่อยุ่ง" || $message == "ชื่อยุ่ง"){
 	  $arrayPostData['to'] = $id;
 	  //$arrayPostData['messages'][0]['type'] = "sticker";
 	  //$arrayPostData['messages'][0]['packageId'] = "1";
@@ -73,14 +67,21 @@
 	  $arrayPostData['messages'][0]['type'] = "text";
 	  $arrayPostData['messages'][0]['text'] = "สวัสดีครับ บอส";
 	  pushMsg($arrayHeader,$arrayPostData);
-   }
-  if($message == "ยุ่ง"){
+   }else if($message == "ยุ่ง"){
 	  $arrayPostData['to'] = $id;
 	  //$arrayPostData['messages'][0]['type'] = "sticker";
 	  //$arrayPostData['messages'][0]['packageId'] = "1";
 	  //$arrayPostData['messages'][0]['stickerId'] = "125";
 	  $arrayPostData['messages'][0]['type'] = "text";
 	  $arrayPostData['messages'][0]['text'] = "ถามแค่นี้ทำไมต้องด่าด้วย บอทเสียใจ TT";
+	  pushMsg($arrayHeader,$arrayPostData);
+   }else{
+   	  $arrayPostData['to'] = $id;
+	  //$arrayPostData['messages'][0]['type'] = "sticker";
+	  //$arrayPostData['messages'][0]['packageId'] = "1";
+	  //$arrayPostData['messages'][0]['stickerId'] = "125";
+	  $arrayPostData['messages'][0]['type'] = "text";
+	  $arrayPostData['messages'][0]['text'] = "บอทไม่เข้าใจที่คุณพูด";
 	  pushMsg($arrayHeader,$arrayPostData);
    }
    function pushMsg($arrayHeader,$arrayPostData){
