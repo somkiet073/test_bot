@@ -33,7 +33,7 @@
 	  $arrayPostData['messages'][0]['packageId'] = "1";
 	  $arrayPostData['messages'][0]['stickerId'] = "125";
 	  $arrayPostData['messages'][1]['type'] = "text";
-	  $arrayPostData['messages'][1]['text'] = "I na hee";
+	  $arrayPostData['messages'][1]['text'] = "I na hee na hee jing jing";
 	  pushMsg($arrayHeader,$arrayPostData);
    }else if($message == "เราชื่อปลื้ม" || $message == "ชื่อปลื้ม" || $message == "ปลื้ม"){
 	  $arrayPostData['to'] = $id;
