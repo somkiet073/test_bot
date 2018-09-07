@@ -82,18 +82,6 @@
 	  $arrayPostData['messages'][0]['type'] = "text";
 	  $arrayPostData['messages'][0]['text'] = "ถามแค่นี้ทำไมต้องด่าด้วย บอทเสียใจ TT";
 	  pushMsg($arrayHeader,$arrayPostData);
-   }else{
-	  $arrayPostData['to'] = $id;
-	  //$arrayPostData['messages'][0]['type'] = "sticker";
-	  //$arrayPostData['messages'][0]['packageId'] = "1";
-	  //$arrayPostData['messages'][0]['stickerId'] = "125";
-	  $arrayPostData['messages'][0]['type'] = "text";
-	  $arrayPostData['messages'][0]['text'] = "ผมไม่เข้าใจ";
-	  $arrayPostData['messages'][1]['type'] = "text";
-	  $arrayPostData['messages'][1]['text'] = "ผมเพิ่งเกิดได้ 6 ชม.";
-	  $arrayPostData['messages'][2]['type'] = "text";
-	  $arrayPostData['messages'][2]['text'] = "ขอเรียนรู้เพิ่มเติม.";
-	  pushMsg($arrayHeader,$arrayPostData);
    }
    function pushMsg($arrayHeader,$arrayPostData){
 	  $strUrl = "https://api.line.me/v2/bot/message/push";
